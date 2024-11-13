@@ -1,0 +1,7 @@
+1. saving data into JS
+2. generate HTML
+3. make add to button interactive
+- after it is clicked, it add a new item into the cart, first by name and then by id
+- modify it so that the quantity will be increased as we click more.
+- show the cart quantity
+-
