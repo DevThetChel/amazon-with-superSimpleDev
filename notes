@@ -26,3 +26,5 @@ Having the script files run in a single file can cause naming conflicts very eas
 - import \* as someName from "..path".
 - and you can access elements from that var like this;
 - someName.cart , someName.addToCart()
+
+- To note about radio selector is that if a set of radio selectors have the same name then we can only select one of them.
