@@ -4,4 +4,19 @@
 - after it is clicked, it add a new item into the cart, first by name and then by id
 - modify it so that the quantity will be increased as we click more.
 - show the cart quantity
--
+
+
+Having the script files run in a single file can cause naming conflicts very easily. We can use module to solve this problem.
+
+- creating a module -> creating a file, don't load the file with script.
+
+- get a var out of a file ->
+1. add type="module" attribute (this let the particular file get variables out of other files)
+2. export
+3. import
+
+- always write import at the top of the file.
+- always need to use live server.
+
+- but that doesn't mean you can name more than one files the same, it will still cause naming conflict, what we achieved using module is that we now have control over where naming conflicts happen.
+- to solve that, you can change the name of the var that you have imported.
