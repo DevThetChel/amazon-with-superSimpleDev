@@ -1,4 +1,4 @@
-export const cart = [
+export let cart = [
   // we don't add all the images and names because we can use productId and search for the data related to that, and the technique is called normalizing data.
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -6,7 +6,7 @@ export const cart = [
   },
   {
     productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-    quantity: 3,
+    quantity: 1,
   },
 ];
 
@@ -27,4 +27,16 @@ export function addToCart(productId) {
       quantity: 1,
     });
   }
+}
+
+export function removeFromCart(productId) {
+  const newCart = [];
+
+  cart.forEach((cartItem) => {
+    if (cartItem.productId !== productId) {
+      newCart.push(cartItem);
+    }
+  });
+
+  cart = newCart;
 }
