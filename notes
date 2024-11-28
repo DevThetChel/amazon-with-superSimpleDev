@@ -28,3 +28,15 @@ Having the script files run in a single file can cause naming conflicts very eas
 - someName.cart , someName.addToCart()
 
 - To note about radio selector is that if a set of radio selectors have the same name then we can only select one of them.
+
+- You can't access any state from separate file, if you want to do that, you will need to use state management or save to the local storage so any file from the project has access.
+
+- you can remove a certain element using someElement.remove().
+
+- Don't ever forget to point specific target with ID whenever needed.
+
+---
+
+DayJS library
+
+- DayJs gives a dayjs function that return values
