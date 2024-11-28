@@ -14,6 +14,7 @@ import {
   deliveryOptions,
   getDeliveryOption,
 } from "../../data/deliveryOptions.js";
+import { renderPaymentSummary } from "./paymentSummary.js";
 
 // const today = dayjs();
 // const deliveryDate = today.add(7, "days");
@@ -155,6 +156,7 @@ export function renderOrderSummary() {
 
       container.remove();
       updateCartQuantity();
+      renderPaymentSummary();
     });
   });
 
@@ -206,6 +208,7 @@ export function renderOrderSummary() {
   document.querySelectorAll(".js-save-link").forEach((link) => {
     link.addEventListener("click", () => {
       updateCartQuantityDetails(link);
+      renderPaymentSummary();
     });
   });
 
@@ -223,6 +226,7 @@ export function renderOrderSummary() {
     element.addEventListener("click", () => {
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
+      renderPaymentSummary();
     });
   });
 }
