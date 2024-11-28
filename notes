@@ -53,6 +53,12 @@ Managing delivery
 6. Update deli choice HTML for each cart item.
 7. Make it interactive -> update deliOptionId in the cart after the selector is clicked (1. need to know which item we want to update. 2. need to set the deliOption for that item as the value that we clicked), and update the page (8)
 
-Notes: When we need to update something after clicking some button or selector, the best way to do is not to use DOM and change the HTML, instead, we should update the data and regenerate all the HTML.
+Notes: When we need to update something after clicking some button or selector, the best way to do is not to use DOM and change the HTML, instead, we should update the data and regenerate all the HTML. This is called MVC(model-view-controller)
+
+- Model -> saves and manages the data(data files)
+- View -> takes the data and generate the HTML
+- Controller -> runs some code when we interact with the page.
+- use model to generate view, take the view and run the controller, controller will update the model, and it starts all over again.
 
 8. and use that code to update the HTML whenever it is clicked.
+9. Split the codes into 2 files (orderSummary and paymentSummary) to clean up the code. Remember to correct the file paths.
