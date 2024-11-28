@@ -62,3 +62,4 @@ Notes: When we need to update something after clicking some button or selector, 
 
 8. and use that code to update the HTML whenever it is clicked.
 9. Split the codes into 2 files (orderSummary and paymentSummary) to clean up the code. Remember to correct the file paths.
+10. i wrote some messy codes before, so i needed to adjust some codes to keep the pj working(pulling the updateCartQuantity out of the function renderOrderSummary, set it as a part of renderOrderSummary, and export that )
