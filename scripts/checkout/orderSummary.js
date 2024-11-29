@@ -11,6 +11,7 @@ import { formatCurrency } from "../utils/money.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
 import {
+  calculateDeliveryDate,
   deliveryOptions,
   getDeliveryOption,
 } from "../../data/deliveryOptions.js";
@@ -46,9 +47,7 @@ export function renderOrderSummary() {
 
     let deliveryOption = getDeliveryOption(deliveryOptionId);
 
-    const today = dayjs();
-    const deliveryDate = today.add(deliveryOption.deliveryDays, "days");
-    const dateString = deliveryDate.format("dddd, MMMM D");
+    const dateString = calculateDeliveryDate(deliveryOption);
 
     cartSummaryHTML += `
   <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
@@ -104,10 +103,7 @@ export function renderOrderSummary() {
   function deliveryOptionsHTML(matchingProduct, cartItem) {
     let html = "";
     deliveryOptions.forEach((deliveryOption) => {
-      const today = dayjs();
-      const deliveryDate = today.add(deliveryOption.deliveryDays, "days");
-      const dateString = deliveryDate.format("dddd, MMMM D");
-
+      const dateString = calculateDeliveryDate(deliveryOption);
       const priceString =
         deliveryOption.priceCents === 0
           ? "FREE"
@@ -150,11 +146,12 @@ export function renderOrderSummary() {
       removeFromCart(productId);
       // console.log(cart);
 
-      const container = document.querySelector(
-        `.js-cart-item-container-${[productId]}`
-      );
+      // const container = document.querySelector(
+      //   `.js-cart-item-container-${[productId]}`
+      // );
 
-      container.remove();
+      // container.remove();
+      renderOrderSummary();
       updateCartQuantity();
       renderPaymentSummary();
     });

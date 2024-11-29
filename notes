@@ -63,3 +63,35 @@ Notes: When we need to update something after clicking some button or selector, 
 8. and use that code to update the HTML whenever it is clicked.
 9. Split the codes into 2 files (orderSummary and paymentSummary) to clean up the code. Remember to correct the file paths.
 10. i wrote some messy codes before, so i needed to adjust some codes to keep the pj working(pulling the updateCartQuantity out of the function renderOrderSummary, set it as a part of renderOrderSummary, and export that )
+
+---
+
+skipping weekends, really awesome
+
+function isWeekend(date) {
+const dayOfWeek = date.format("dddd");
+return dayOfWeek === "Saturday" || dayOfWeek === "Sunday";
+}
+
+export function calculateDeliveryDate(deliveryOption) {
+// const today = dayjs();
+// const deliveryDate = today.add(deliveryOption.deliveryDays, "days");
+
+let remainingDays = deliveryOption.deliveryDays;
+
+let deliveryDate = dayjs();
+console.log(deliveryDate);
+
+while (remainingDays > 0) {
+deliveryDate = deliveryDate.add(1, "day");
+
+    if (!isWeekend(deliveryDate)) {
+      remainingDays--;
+    }
+
+}
+
+const dateString = deliveryDate.format("dddd, MMMM D");
+
+return dateString;
+}
