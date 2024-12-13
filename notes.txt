@@ -164,3 +164,7 @@ because the class will run for every instance, so we can eliminate some steps an
 
 - constructor method has to be named constructor.
 - should not return anything
+
+- We can prevent some properties from being accidentally used from the outside of the class by defining it is a private property using # like this: 
+#localStorageKey
+- It is the same for the methods, too. 
