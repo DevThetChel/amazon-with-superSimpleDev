@@ -112,3 +112,55 @@ this.method or this.property
 }
 
 - In OOP, we use PascalCase for things that generate objects. 
+
+- We used functions to generate objects and now we are gonna use classes to do that because classes are cleaner and provide more features. 
+
+-------------------------------
+Class = object generator 
+- class Cart {}
+- We set properties differently to an object: while we use -> cart = {
+  cartItems: undefined, 
+}
+in an object, we use 
+-> class Cart {
+  cartItems = undefined; 
+  (you can just write cartItems; as well)
+}
+
+- Also while we call the function directly and assign it into a var when using functions to create an object instance like: 
+const cart = Cart();
+we use keyword new in classes, 
+const cart = new Cart();
+
+- Unlike in functions, instead of passing parameters, we define those values needed to use in the class outside:
+cart.localStorageKey = "cart-oop";
+business.localStorageKey = "cart-business"
+
+- Class features 
+- Constructor - lets us run setup code after creating an object.
+- Above codes: cart.localStorageKey = "cart-oop";
+business.localStorageKey = "cart-business"
+don't need to be written outside of the class anymore, you can add those setup codes inside of a constructor,which is a special method inside a class, it will automatically run as soon as the obj has been created. 
+- constructor() {
+    cart.localStorageKey = "cart-oop";
+    businessCart.localStorageKey = "cart-business";
+    cart.loadFromStorage();
+    businessCart.loadFromStorage();
+  }
+
+- You can update them to this: 
+ constructor() {
+    this.localStorageKey = "cart-oop";
+    this.loadFromStorage();
+  }
+because the class will run for every instance, so we can eliminate some steps and it is again the same as the functions in passing parameters. 
+- constructor(localStorageKey) {
+    this.localStorageKey = localStorageKey;
+    this.loadFromStorage();
+  }
+- const cart = Cart("cart-oop")
+- const businessCart = Cart("cart-business
+)
+
+- constructor method has to be named constructor.
+- should not return anything
