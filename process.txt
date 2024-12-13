@@ -1,0 +1,12 @@
+- Generating products HTML 
+- Adding a particular item into the cart. 
+- Updating the cart quantity and cart HTML container in the main page. 
+- Use module and make separate functions for clarity.
+
+- Create Cart item and generate checkout HTML.  
+-  Delete particular item from the cart and update HTML.
+- Update a certain item quantity and also update the HTML. 
+- Save the data to local Storage. 
+
+- Use external library and manage checkout details. 
+- Create delivery options and link with cart items.

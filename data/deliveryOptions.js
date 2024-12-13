@@ -42,7 +42,7 @@ export function calculateDeliveryDate(deliveryOption) {
   let remainingDays = deliveryOption.deliveryDays;
 
   let deliveryDate = dayjs();
-  console.log(deliveryDate);
+  // console.log(deliveryDate);
 
   while (remainingDays > 0) {
     deliveryDate = deliveryDate.add(1, "day");

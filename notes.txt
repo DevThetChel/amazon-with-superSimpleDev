@@ -95,3 +95,20 @@ const dateString = deliveryDate.format("dddd, MMMM D");
 
 return dateString;
 }
+
+-----------------------------------
+
+OOP 
+- Organizing our codes into objects
+- Normal coding style that we write in step-by-step instruction is called procedural programming. 
+
+- We use OOP because it reflects the real world, you have a physical cart, you can add things to the cart and remove things from it. 
+
+- And because you are creating the whole cart including its functions as an object, you can simply copy or inspire it to create another similar cart without needing to create it from scratch. 
+
+- You can refer the object from inside of it using this. For example,  
+cart={...
+this.method or this.property
+}
+
+- In OOP, we use PascalCase for things that generate objects. 
