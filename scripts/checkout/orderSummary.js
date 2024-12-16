@@ -6,7 +6,7 @@ import {
   updateQuantity,
 } from "../../data/cart.js";
 // import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
-import { getProduct, products } from "../../data/products.js";
+import { getProduct } from "../../data/products.js";
 import { formatCurrency } from "../utils/money.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 

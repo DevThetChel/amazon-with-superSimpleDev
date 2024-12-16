@@ -12,7 +12,7 @@ export function getProduct(productId) {
   return matchingProduct;
 }
 
-class product {
+class Product {
   id;
   image;
   name;
@@ -522,7 +522,7 @@ export const products = [
     keywords: ["sweaters", "hoodies", "apparel", "mens"],
   },
 ].map((productDetails) => {
-  return new product(productDetails);
+  return new Product(productDetails);
 });
 
 console.log(products);
